@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Ember with D3 Charts:</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      {{pie-chart data=model dataIndex=dataIndex}}
+    </div>
+    <div class="col-sm-6">
+      {{bar-chart data=model dataIndex=dataIndex}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7">
+      {{line-chart data=model dataIndex=dataIndex}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <button type="button" name="button" class="btn btn-success btn-block" onclick={{route-action "changeChartData"}}>Change Data</button>
+    </div>
+  </div>
+  {{outlet}}
+</div>
+
+{{ember-notify}}
