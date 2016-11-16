@@ -1,5 +1,39 @@
+
+body {
+  background-color: #E9F0F5;
+  font-family: "Droid Serif", serif;
+  color: #7f8c97;
+}
+
 svg {
-  border: 1px solid blue;
+  margin: 0px auto;
+}
+
+.main-title {
+  display: inline-block;
+}
+
+.chart-item, .data-list {
+  background-color: #fff;
+  box-shadow: 2px 3px 4px #d7e4ed;
+  border-radius: 10px;
+  margin: 5px;
+  height: 360px;
+}
+
+.data-list {
+  padding: 4px;
+}
+
+.item {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #60E9FF;
+  padding: 0px 3px;
+  margin: 3px 0px;
+  color: #444;
+  box-shadow: inset 0px 0px 2px #222;
+  font-size: 1.7em;
 }
 
 .success {
