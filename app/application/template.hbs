@@ -1,25 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
-      <h2>Ember with D3 Charts:</h2>
+    <div class="col-lg-11">
+      <h2 class="main-title">Ember with D3 Charts and dynamic data:</h2>
+      <button type="button" name="button" class="btn btn-success" onclick={{route-action "changeChartData"}}>Manually Change Data</button>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-lg-4 chart-item">
       {{pie-chart data=model dataIndex=dataIndex}}
     </div>
-    <div class="col-sm-6">
+    <div class="col-lg-7 chart-item">
       {{bar-chart data=model dataIndex=dataIndex}}
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-7">
+    <div class="col-lg-8 chart-item">
       {{line-chart data=model dataIndex=dataIndex}}
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <button type="button" name="button" class="btn btn-success btn-block" onclick={{route-action "changeChartData"}}>Change Data</button>
+    <div class="col-lg-3 data-list">
+      <h2>- Color | Count:</h2>
+      {{#each dataOut as |element|}}
+        {{data-element data=element}}
+      {{/each}}
     </div>
   </div>
   {{outlet}}

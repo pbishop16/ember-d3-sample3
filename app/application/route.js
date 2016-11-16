@@ -46,7 +46,7 @@ export default Ember.Route.extend({
     let notify = this.get('notify');
     yield timeout(1000);
     try {
-      // notify.info('Changing Chart data...');
+      notify.warning('Starting Automatic Process...');
       while (true) {
         yield timeout(2500);
 
@@ -57,7 +57,7 @@ export default Ember.Route.extend({
         } else {
           this.controller.set('dataIndex', 0);
         }
-        console.log(this.controller.get('dataIndex'));
+        // console.log(this.controller.get('dataIndex'));
 
         notify.info('Automatically changing chart data...');
       }
@@ -79,7 +79,7 @@ export default Ember.Route.extend({
         this.controller.set('dataIndex', 0);
       }
       notify.success("User forced change.");
-      console.log(this.controller.get('dataIndex'));
+      // console.log(this.controller.get('dataIndex'));
 
     }
   }
